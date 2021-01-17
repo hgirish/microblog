@@ -1,3 +1,4 @@
+
 .flaskenv
 ProdConfig.py
 
@@ -35,3 +36,5 @@ instance/
 
 *.sqlite
 *.log
+
+!migrations/env.py
