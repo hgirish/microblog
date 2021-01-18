@@ -1,4 +1,4 @@
-{% from "_formhelpers.html" import render_field %}
+{% from "_bootstrapformhelpers.html" import render_field %}
 {% extends 'base.html' %}
 {% block content %}
 <h1>Hello, {{current_user.username}}!</h1>
@@ -6,7 +6,7 @@
 <form action="" method="post">
   {{ form.hidden_tag() }}
   <dl>
-   {{ render_field(form.post)}}
+    {{ render_field(form.post, class="form-control")}}
   </dl>
   <p>
     {{ form.submit() }}
