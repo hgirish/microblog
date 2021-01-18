@@ -1,7 +1,7 @@
 {% macro render_field(field) %}
 <div class="mb-3">
   {{ field.label(class="form-label") }}
-  {{ field(**kwargs)|safe }}
+  {{ field(class_="form-control", **kwargs)|safe }}
   {% if field.errors %}
   <ul class=errors>
     {% for error in field.errors %}
@@ -15,7 +15,7 @@
 {% macro render_checkbox(field) %}
 <div class="mb-3 form-check">
 
-  {{ field(**kwargs)|safe }}
+  {{ field(class_="form-check-input",**kwargs)|safe }}
   {{ field.label(class="form-check-label") }}
   {% if field.errors %}
   <ul class=errors>

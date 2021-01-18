@@ -4,9 +4,9 @@
 <h1>Sign In</h1>
 <form action="" method="POST" novalidate>
   {{ form.hidden_tag() }}
-  {{ render_field(form.username, class="form-control")}}
-  {{ render_field(form.password, class="form-control")}}
-  {{ render_checkbox(form.remember_me, class="form-check-input")}}
+  {{ render_field(form.username)}}
+  {{ render_field(form.password)}}
+  {{ render_checkbox(form.remember_me)}}
 
   <p>{{form.submit(class="btn btn-primary")}}</p>
 </form>
