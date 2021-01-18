@@ -5,11 +5,11 @@
 {% if form %}
 <form action="" method="post">
   {{ form.hidden_tag() }}
-  <dl>
-    {{ render_field(form.post, class="form-control")}}
-  </dl>
+
+  {{ render_field(form.post, class="form-control")}}
+
   <p>
-    {{ form.submit() }}
+    {{ form.submit(class="btn btn-primary") }}
   </p>
 </form>
 {% endif %}

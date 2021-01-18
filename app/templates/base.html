@@ -1,3 +1,4 @@
+{% from "_bootstrapformhelpers.html" import render_field, render_checkbox %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -50,10 +51,11 @@
 
 
   <main>
-    <div class="container" {% with messages=get_flashed_messages() %} {% if messages %} <ul>
-      {% for message in messages %}
-      <li>{{ message }}</li>
-      {% endfor %}
+    <div class="container">
+      {% with messages=get_flashed_messages() %} {% if messages %} <ul>
+        {% for message in messages %}
+        <li>{{ message }}</li>
+        {% endfor %}
       </ul>
       {% endif %} {% endwith %} {% block content %} base content block{% endblock
       %}
