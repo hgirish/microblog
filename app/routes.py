@@ -1,11 +1,10 @@
 from flask.globals import request
-from flask_login.utils import logout_user
 from werkzeug.urls import url_parse
 from app.models import User, Post
 from app.forms import LoginForm, PostForm, RegistrationForm, EditProfileForm, EmptyForm
 from flask import render_template, flash, redirect, url_for
 from app import app, db
-from flask_login import current_user, login_user, login_required
+from flask_login import current_user, login_user, login_required, logout_user
 from datetime import datetime
 
 
