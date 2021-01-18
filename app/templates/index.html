@@ -1,7 +1,18 @@
-{% extends 'base.html' %} {% block content %}
+{% from "_formhelpers.html" import render_field %}
+{% extends 'base.html' %}
+{% block content %}
 <h1>Hello, {{current_user.username}}!</h1>
+{% if form %}
+<form action="" method="post">
+  {{ form.hidden_tag() }}
+  <dl>
+   {{ render_field(form.post)}}
+  </dl>
+  <p>
+    {{ form.submit() }}
+  </p>
+</form>
+{% endif %}
 {% for post in posts %}
-<div>
-  <p>{{ post.author.username }} says: <b>{{post.body}}</b></p>
-</div>
+{% include '_post.html' %}
 {% endfor %} {% endblock content %}
