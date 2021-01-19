@@ -52,13 +52,21 @@
 
   <main>
     <div class="container">
-      {% with messages=get_flashed_messages() %} {% if messages %} <ul>
+      {% with messages=get_flashed_messages() %}
+      {% if messages %}
+      <div class="alert alert-warning alert-dismissible fade show" role="alert">
+
         {% for message in messages %}
-        <li>{{ message }}</li>
+        <div>{{ message }}</div>
         {% endfor %}
-      </ul>
-      {% endif %} {% endwith %} {% block content %} base content block{% endblock
-      %}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+
+      </div>
+      {% endif %}
+      {% endwith %}
+      {% block content %}
+      base content block
+      {% endblock %}
 
     </div>
   </main>
