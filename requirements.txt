@@ -4,3 +4,5 @@ flask-migrate
 flask-login
 flask-wtf
 email-validator
+flask-mail
+pyjwt
