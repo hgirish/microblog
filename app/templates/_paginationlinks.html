@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="d-flex justify-content-between">
+        {% if prev_url %}
+        <div class="p-2">
+            <a href="{{ prev_url}}">Newer posts</a>
+        </div>
+        {% endif %}
+        {% if next_url %}
+        <div class="p-2">
+            <a href="{{ next_url }} ">Older posts</a>
+        </div>
+        {% endif %}
+
+    </div>
+</div>
