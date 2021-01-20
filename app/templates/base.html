@@ -71,6 +71,13 @@
     </div>
   </main>
   <script src="{{url_for('static', filename='bootstrap/js/bootstrap.min.js')}}"></script>
+  {{ moment.include_jquery() }}
+  {{ moment.include_moment() }}
+  {% block scripts %}
+
+
+  {% endblock scripts %}
+
 </body>
 
 </html>
