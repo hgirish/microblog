@@ -73,6 +73,7 @@
   <script src="{{url_for('static', filename='bootstrap/js/bootstrap.min.js')}}"></script>
   {{ moment.include_jquery() }}
   {{ moment.include_moment() }}
+  {{ moment.lang(g.locale)}}
   {% block scripts %}
 
 

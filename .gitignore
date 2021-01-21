@@ -1,6 +1,7 @@
 
 .flaskenv
 ProdConfig.py
+translations/
 
 .DS_Store
 .env

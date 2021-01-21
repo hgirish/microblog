@@ -4,10 +4,17 @@
       <img src="{{post.author.avatar(36)}}">
     </td>
     <td>
+      {% set user_link %}
       <a href="{{url_for('user', username=post.author.username)}}">
         {{ post.author.username }}
       </a>
-      said {{ moment(post.timestamp).fromNow() }}: <br>{{post.body}}
+      {% endset %}
+      {{ _('%(username)s said %(when)s',
+      username=user_link, when=moment(post.timestamp).fromNow())}}
+      <br>
+      {{post.body}}
+
+
     </td>
   </tr>
 
